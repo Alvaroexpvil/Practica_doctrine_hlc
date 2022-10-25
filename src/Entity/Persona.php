@@ -14,29 +14,39 @@ class Persona
      * @ORM\Id()
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue()
+     *
      */
-    private $id;
+    private ?int $id;
 
     /**
      * @ORM\Column(type="string")
      */
-    private $nombre;
+    private ?string $nombre;
 
     /**
      * @ORM\Column(type="string")
      */
 
-    private $apellidos;
+    private ?string $apellidos;
 
     /**
      * @ORM\Column(type="string",length=9,nullable=true,unique=true)
      */
-    private $dni;
+    private ?string $dni;
 
     /**
      * @ORM\Column (type="date",nullable=true)
      */
-    private $fechaNacimiento;
+    private ?\DateTime $fechaNacimiento;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
 
 
 }
