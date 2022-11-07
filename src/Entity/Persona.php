@@ -47,6 +47,25 @@ class Persona
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
+    public function getNombre(): ?string
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * @param string|null $nombre
+     * @return Persona
+     */
+    public function setNombre(?string $nombre): Persona
+    {
+        $this->nombre = $nombre;
+        return $this;
+    }
+
+
 
 
 }
